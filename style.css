@@ -7,7 +7,6 @@ body {
     grid-template-rows: .05fr 0.5fr 3fr;
     width: 100vw;
     margin: 0;
-    height: 100vh;
 }
 .header {
     background-color: white;
@@ -100,7 +99,7 @@ fa-search {
     grid-row: 1 / 3;
     display: grid;
     grid-template-rows: 0.3fr repeat(2, 1fr);
-    gap: 20px;
+    gap: 10px;
 }
 .link {
     text-decoration: none;
@@ -130,13 +129,39 @@ grid-template-columns: 0.5fr 3fr;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     padding: 10px;
+    gap: 30px;
 }
 .projects {
     grid-column: 1;
     grid-row: 1 / -1;
+}
+.projectContainer {
+    overflow: auto;
+    display: grid;
+    gap: 15px;
+    padding: 4px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.projectBox {
+    background-color: white;
+    padding: 10px;
+    display: grid;
+    grid-auto-rows: repeat(3, 1fr);
+    border-left: 7px solid hotpink;
+    border-radius: 8px;
+}
+.boxTitle {
+    font-size: medium;
+}
+.boxContent {
+    font-size: small;
+}
+.boxIcons {
+    justify-self: end;
 }
 .announcement {
     grid-column: 2;
