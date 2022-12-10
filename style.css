@@ -86,15 +86,14 @@ fa-search {
     justify-content: space-evenly;
 }
 .headerbutton {
-    background-color: #6b21a8;
-    color: white;
+    background-color: #fbcfe8;
     border: none;
     border-radius: 25px;
     font-size: 15px;
     padding: 10px;
 }
 .sidebar {
-    background-color: #6b21a8;
+    background-color: #fbcfe8;
     grid-row: 1 / 3;
 }
 .main-content {
