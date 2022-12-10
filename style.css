@@ -1,24 +1,28 @@
 body {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: .05fr 0.5fr 3fr;
     width: 100vw;
     margin: 0;
+    height: 100vh;
 }
 .header {
-    background-color: aquamarine;
+    background-color: white;
     grid-column: 2 / 3;
     grid-row: 1;
     display: grid;
     grid-template-rows: 0.5fr 1fr;
+    border-bottom: 4px solid rgba(105, 105, 105, 0.4);
 }
 .topheader {
     display: grid;
-    grid-template-columns: 0.3fr 2.5fr repeat(2, 0.3fr) 0.7fr;
+    grid-template-columns: 1fr 6.5fr 2fr 0.5fr 0.5fr 1fr;
     justify-items: center;
         align-items: center;
         padding: 0;
         margin: 0;
+        grid-template-areas: "fs sb . be pp un";
+        gap: 5px;
 }
 .profilePicTop {
     height: 35px;
@@ -26,6 +30,8 @@ body {
     border-radius: 50%;
     border: 1px solid black;
     justify-self: center;
+    grid-area: pp;
+    background-color: cyan;
 }
 .search-bar {
     height: 20px;
@@ -33,9 +39,11 @@ body {
     border-radius: 25px;
     background-color: lightgrey;
     justify-self: start;
+    grid-area: sb;
 }
 .fa-bell {
     justify-self: end;
+    grid-area: be;
 }
 
 .username {
@@ -43,17 +51,54 @@ body {
     font-weight: bold;
     margin: 0;
     justify-self: start;
+    grid-area: un;
+}
+fa-search {
+    grid-area: fs;
+}
+.headerBottom {
+    display: grid;
+    grid-template-columns:  0.3fr 2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 .profilePicBottom {
     width: 50px;
     height: 50px;
+    justify-self: end;
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: cyan;
+}
+.topText {
+    font-weight: bold;
+    justify-self: start;
+}
+.hello {
+    font-size: small;
+}
+.userAt {
+    font-size: medium;
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+.headerbutton {
+    background-color: #6b21a8;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 10px;
 }
 .sidebar {
-    background-color: blueviolet;
+    background-color: #6b21a8;
     grid-row: 1 / 3;
 }
 .main-content {
-    background-color: hotpink;
+    background-color: lightgrey;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
 }
