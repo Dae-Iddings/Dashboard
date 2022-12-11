@@ -6,6 +6,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: .05fr 0.5fr 3fr;
+    height: 100vh;
+    margin: 0;
 }
 .header {
     background-color: white;
